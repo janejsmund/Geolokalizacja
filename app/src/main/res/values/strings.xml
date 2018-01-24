@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Geolokalizacja</string>
+    <string name="nazwa">Nazwa:</string>
+    <string name="opis_miejsca">Opis miejsca:</string>
+    <string name="promie">Promień:</string>
+    <string name="dodaj">Dodaj</string>
 </resources>
