@@ -4,4 +4,6 @@
     <string name="opis_miejsca">Opis miejsca:</string>
     <string name="promie">Promień:</string>
     <string name="dodaj">Dodaj</string>
+    <string name="google_maps_api_key">AIzaSyBIrMYtcflC8gya4i2FjBq6iD7KOCPI14M</string>
+    <string name="dodaj_lokalizacj">Dodaj lokalizację</string>
 </resources>
