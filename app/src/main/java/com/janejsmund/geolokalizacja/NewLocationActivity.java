@@ -1,15 +1,17 @@
 package com.janejsmund.geolokalizacja;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-public class NewLocationActivity extends AppCompatActivity {
+public class NewLocationActivity extends Activity {
 
-    EditText edtNazwa, edtOpis, edtPromien;
+    EditText hNazwa, hOpis, hPromien;
 
     LocationTracker locationTracker;
 
@@ -18,9 +20,9 @@ public class NewLocationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_location);
 
-        edtNazwa = findViewById(R.id.edtNazwa);
-        edtOpis = findViewById(R.id.edtNazwa);
-        edtPromien = findViewById(R.id.edtPromien);
+        hNazwa = findViewById(R.id.edtNazwa);
+        hOpis = findViewById(R.id.edtOpis);
+        hPromien = findViewById(R.id.edtPromien);
 
     }
 
@@ -40,9 +42,9 @@ public class NewLocationActivity extends AppCompatActivity {
 
         if (locationTracker.isLocationPermissionEnabled()) {
 
-            nazwa = edtNazwa.getText().toString();
-            opis = edtOpis.getText().toString();
-            promien = edtPromien.getText().toString();
+            nazwa = hNazwa.getText().toString();
+            opis = hOpis.getText().toString();
+            promien = hPromien.getText().toString();
 
             latitude = String.valueOf(locationTracker.getLatitude());
             longitude = String.valueOf(locationTracker.getLongitude());
@@ -59,6 +61,7 @@ public class NewLocationActivity extends AppCompatActivity {
             contentValues.put(DatabaseContract.DatabaseEntry.COLUMN_LONGITUDE, longitude);
 
             db.insert(DatabaseContract.DatabaseEntry.TABLE_NAME, null, contentValues);
+            Log.i("wpis", "Dodano wpis do bazy danych: Nazwa: " + nazwa + ", Opis: " + opis + ", Promień: " + promien + ", latitude: " + latitude + ", longitude: " + longitude);
         }
         else {
             locationTracker.askToEnableLocationPermission();

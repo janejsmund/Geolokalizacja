@@ -7,10 +7,12 @@
     tools:context="com.janejsmund.geolokalizacja.MainActivity"
     android:orientation="vertical">
 
-    <com.google.android.gms.maps.MapView
+    <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/map"
+        tools:context=".MainActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_weight="1"/>
 
     <Button

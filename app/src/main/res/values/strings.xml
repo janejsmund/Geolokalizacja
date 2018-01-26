@@ -6,4 +6,7 @@
     <string name="dodaj">Dodaj</string>
     <string name="google_maps_api_key">AIzaSyBIrMYtcflC8gya4i2FjBq6iD7KOCPI14M</string>
     <string name="dodaj_lokalizacj">Dodaj lokalizację</string>
+    <string name="nazwa_lokalizacji">nazwa lokalizacji</string>
+    <string name="opis_lokalizacji">opis lokalizacji</string>
+    <string name="np_12">np. 12</string>
 </resources>

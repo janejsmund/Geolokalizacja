@@ -5,16 +5,17 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import static com.janejsmund.geolokalizacja.DatabaseContract.*;
+import static com.janejsmund.geolokalizacja.DatabaseContract.DatabaseEntry.COLUMN_NAME;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    static final int DATABASE_VERSION = 1;
-    static final String DATABASE_NAME = "locations.db";
+    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME = "locations.db";
 
     private static final String SQL_CREATE_LOCATIONS =
             "CREATE TABLE " + DatabaseEntry.TABLE_NAME + " (" +
                     DatabaseEntry._ID + " INTEGER PRIMARY KEY," +
-                    DatabaseEntry.COLUMN_NAME + " TEXT," +
+                    COLUMN_NAME + " TEXT," +
                     DatabaseEntry.COLUMN_DESCRIPTION + " TEXT," +
                     DatabaseEntry.COLUMN_RADIUS + " TEXT," +
                     DatabaseEntry.COLUMN_LATITUDE + " TEXT," +

@@ -1,7 +1,7 @@
 package com.janejsmund.geolokalizacja;
 
 
-public class MyLocation {
+class MyLocation {
 
     private String nazwa;
     private String opis;
@@ -9,7 +9,9 @@ public class MyLocation {
     private String latitude;
     private String longitude;
 
-    public MyLocation(String nazwa, String opis, String promien, String latitude, String longitude) {
+    MyLocation() {}
+
+    private MyLocation(String nazwa, String opis, String promien, String latitude, String longitude) {
         this.nazwa = nazwa;
         this.opis = opis;
         this.promien = promien;
@@ -17,23 +19,43 @@ public class MyLocation {
         this.longitude = longitude;
     }
 
-    public String getNazwa() {
+    void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
+    }
+
+    void setOpis(String opis) {
+        this.opis = opis;
+    }
+
+    void setPromien(String promien) {
+        this.promien = promien;
+    }
+
+    void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    String getNazwa() {
         return nazwa;
     }
 
-    public String getOpis() {
+    String getOpis() {
         return opis;
     }
 
-    public String getPromien() {
+    String getPromien() {
         return promien;
     }
 
-    public String getLatitude() {
+    String getLatitude() {
         return latitude;
     }
 
-    public String getLongitude() {
+    String getLongitude() {
         return longitude;
     }
 }
