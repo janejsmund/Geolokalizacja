@@ -15,7 +15,7 @@ import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
-class LocationTracker extends Service implements LocationListener {
+public class LocationTracker extends Service implements LocationListener {
 
     private Context context;
     boolean isGPSOn = false;

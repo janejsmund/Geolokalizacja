@@ -145,24 +145,28 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER | Geofence.GEOFENCE_TRANSITION_EXIT)
             .build());
 
-            client.addGeofences(getGeofencingRequest(), getGeofencePendingIntent())
-                    .addOnSuccessListener(this, new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Log.i("geof", "added");
-                        }
-                    });
+
         }
 
-
+        client.addGeofences(getGeofencingRequest(), getGeofencePendingIntent())
+                .addOnSuccessListener(this, new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.i("geof", "added");
+                    }
+                });
 
 
     }
 
     private GeofencingRequest getGeofencingRequest() {
+
         GeofencingRequest.Builder builder = new GeofencingRequest.Builder();
+
         builder.setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER);
+
         builder.addGeofences(geofences);
+
         return builder.build();
     }
 
